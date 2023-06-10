@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial scale=1.0">
+    <title>
+        Pet Shop
+    </title>
+
+    <!-- Css Sheet Link -->
+    <link rel="stylesheet" href="finalproject.css">
+
+    <!--------Font Awesome------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- Top Button -->
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+    <!-- Java Script -->
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <!------------Header--------------->
+
+    <section class="header">
+        <nav>
+            <div class="menubar" id="menubar">
+
+                <div class="nav-links-rt">
+                    <ul>
+                        <li><b><a href="#gallery">GALLERY</a></b></li>
+                        <li><b><a href="#video">VIDEOS</a></b></li>
+                        <li><b><a href="#contact">CONTACT</a></b></li>
+                    </ul>
+                </div>
+                <div class="nav-links-lft">
+                    <ul>
+
+                        <li><b><a href="#Pets">PETS</a></b></li>
+                        <li><b><a href="#products">PRODUCTS</a></b></li>
+                        <li><b><a href="#About us">ABOUT US</a></b></li>
+
+
+                    </ul>
+                </div>
+                <div class="petlogo">
+                    <a href=""> <img src="PetShop Logo.png" alt="Pet shop logo">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!--------------Enquiry Button----------------->
+
+        <div class="text-box">
+            <p>For Your Every</p>
+            <h1> Pet Care Need</h1>
+
+            <button class="hero-btn" onclick="openForm()">Inquiry</button>
+
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <h1 style="color: black;">Inquiry</h1>
+
+                    <form>
+                        <input type="text" class="input-field" placeholder="Your Name" required>
+                        <input type="email" class="input-field" placeholder="Your Email" required>
+
+                        <select class="input-field">
+                            <option>Pakistan 🇵🇰</option>
+                            <option>America 🇺🇸</option>
+                            <option>United Kingdom 🇬🇧</option>
+                            <option>France 🇫🇷</option>
+                            <option>Spain 🇪🇸</option>
+                        </select>
+                        <textarea type="text" class="input-field" placeholder="Type Your Queries Here!"
+                            required></textarea>
+
+                        <button type="submit" class="submission" onclick="closeForm();myFunction();">Send</button>
+                        <script>
+                            function myFunction() {
+                                alert("Enquiry Sent");
+                            }
+                        </script>
+                    </form>
+            </div>
+
+            <script>
+                function openForm() {
+                    document.getElementById("myForm").style.display = "block";
+                }
+
+                function closeForm() {
+                    document.getElementById("myForm").style.display = "none";
+                }
+            </script>
+
+        </div>
+
+    </section>
+
+    <!-----------------pets---------------->
+
+    <section class="pets">
+        <div style="width: 100%;">
+            <h1><a id="Pets"> Pets </a></h1>
+        </div>
+
+        <div style="width: 100%; display: flex; flex-wrap: wrap;">
+            <div class="container1">
+                <div class="dog-img">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1529954382468-c3b5e8371e10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=525&q=80">
+                </div>
+                <div class="text1">
+                    <h3>Dogs</h3>
+                    <p>Our goal is to find a puppy as enjoyable as owning one.<br>
+                        Everyone should have a puppy in their lives. Take your pick<br>
+                        from the large collection of puppies & dogs in our store.</p>
+                </div>
+            </div>
+
+            <div class="container2">
+                <div class="cats-img">
+                    <img
+                        src="https://images.unsplash.com/photo-1598417931808-7535ef6976da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=596&q=80">
+                </div>
+                <div class="text2">
+                    <h3>Cats</h3>
+                    <p>Cats are huge in size, rich colouring, double boned,<br> with perfect looks.
+                        We offer a perfect platform to purchase <br>cats. Buy a cat
+                        and add a little giggle to your life</p>
+                </div>
+
+            </div>
+
+            <div class="container3">
+                <div class="birds-img">
+                    <img
+                        src="https://images.unsplash.com/photo-1627676158206-1726d46715a9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80">
+                </div>
+                <div class="text3">
+                    <h3>Birds</h3>
+                    <p>Let the mornings start with their beautiful chirping.<br>
+                        We offer all sizes and types of exotic birds for sale,<br> which surely will
+                        make your life incredible.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="container4">
+                <div class="small-pets">
+                    <img
+                        src="https://images.unsplash.com/photo-1630535590869-0746f0e68d22?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80">
+                </div>
+                <div class="text4">
+                    <h3>Small Pets</h3>
+                    <p>Cute, cuddly and furry friends from our small animal collection will<br>
+                        warm your heart! They’re smart, interactive and fun to watch!<br>
+                        Spice things up a bit and come see our exotic creatures!</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!------------------products-------------------->
+
+    <section class="products">
+        <div style="width: 100%; padding-top: 20px; padding-bottom: 20px;">
+            <h1><a id="products">Products</a></h1>
+        </div>
+        <div style="width: 100%; display: flex; flex-wrap: wrap;">
+            <!-- <div class="row"> -->
+                <div class="column">
+
+
+                    <img src="https://images.unsplash.com/photo-1580383857470-d5eff2e6b845?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                        alt="persian cats">
+                    <!-- <h5>Persian Cat</h5> -->
+                    <div>
+                        <h3 style="text-align: left;" >Persian Cat</h3>
+                        <h5 style="text-align: left;">→ Friendly</h5>
+                        <h5 style="text-align: left;">→ Smart</h5>
+                        <h5 style="text-align: left;">→ Calm</h5>
+                        <h5 style="text-align: left;">→ Gorgeous Looks</h5>
+                    </div>
+
+                </div>
+                <div class="column">
+
+                    <img src="https://images.pexels.com/photos/7483187/pexels-photo-7483187.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="Beagle Puppies">
+                    <!-- <h5>Persian Cat</h5> -->
+                    <div>
+                        <h3 style="text-align: left;" >Beagle Puppies</h3>
+                        <h5 style="text-align: left;">→ Active</h5>
+                        <h5 style="text-align: left;">→ Loyal</h5>
+                        <h5 style="text-align: left;">→ Friendly</h5>
+                        <h5 style="text-align: left;">→ Versatile</h5>
+                    </div>
+                </div>
+                <div class="column">
+
+                    <img src="https://images.unsplash.com/photo-1636725376497-08bea7ba1610?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                        alt="Hamster">
+                    <!-- <h5>Persian Cat</h5> -->
+                    <div>
+                        <h3 style="text-align: left;">Hamster</h3>
+                        <h5 style="text-align: left;">→ Cute</h5>
+                        <h5 style="text-align: left;">→ Small</h5>
+                        <h5 style="text-align: left;">→ Furry</h5>
+                        <h5 style="text-align: left;">→ Ease of care</h5>
+                    </div>
+                </div>
+                <div class="column">
+
+                    <img src="https://images.pexels.com/photos/7408291/pexels-photo-7408291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        alt="rabbits">
+                    <!-- <h5>Persian Cat</h5> -->
+                    <div>
+                        <h3 style="text-align: left;" >Rabbit</h3>
+                        <h5 style="text-align: left;">→ Quiet Creature</h5>
+                        <h5 style="text-align: left;">→ Clean Pet</h5>
+                        <h5 style="text-align: left;">→ Economic to Keep</h5>
+                        <h5 style="text-align: left;">→ Live a Long Time</h5>
+                    </div>
+                </div>
+                <div class="column">
+
+                    <img src="https://images.unsplash.com/photo-1594911588637-c9e891bd7858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=550&q=80"
+                        alt="parrots">
+                    <!-- <h5>Persian Cat</h5> -->
+                    <div>
+                        <h3 style="text-align: left;" >Parrot</h3>
+                        <h5 style="text-align: left;">→ Intelligent</h5>
+                        <h5 style="text-align: left;">→ Easy To Train</h5>
+                        <h5 style="text-align: left;">→ Social</h5>
+                        <h5 style="text-align: left;">→ Beautiful</h5>
+                    </div>
+                </div>
+                <div class="column">
+
+                    <img src=https://images.pexels.com/photos/5321441/pexels-photo-5321441.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+                        alt="pug puppies">
+                    <!-- <h5>Persian Cat</h5> -->
+                    <div>
+                        <h3 style="text-align: left;" >Pug Puppies</h3>
+                        <h5 style="text-align: left;">→ Natural Cuddlers</h5>
+                        <h5 style="text-align: left;">→ Smart</h5>
+                        <h5 style="text-align: left;">→ Quick Learners</h5>
+                        <h5 style="text-align: left;">→ Calm</h5>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <!----------------About us----------------->
+
+    <section class=" about">
+        <div class="aboutimg">
+            <div style="width: 100%; padding-bottom: 20px;">
+                <h1><a id="About us">About us</a></h1>
+            </div>
+            <img src="https://icatcare.org/app/uploads/2018/10/Introducing-a-cat-or-kitten-to-your-dog.png" alt="pets"
+                style="border-radius: 15px;" class="img-loaded">
+            <p>
+                We, F'n'S Pet Store, situated at F-7 Markaz, Islambad, Pakistan are recognised as a home to
+                massive range of globally renowned pets like Cats, Dogs, Birds and Rabbits. Our Aim is to
+                Provide a User Friendly, Fun and Relaxing Shopping Experience while giving the Best Service
+                Available for our Customers and their Pet. We also provide the highest and assured quality of
+                different breeds of pets. We also Assist in Buying Puppies and Kittens of Pure Breed. We strive
+                to bring joy to you and your pet on a daily basis.
+            </p>
+        </div>
+    </section>
+
+    <!---------------Gallery------------->
+
+    <section class="gallery">
+        <div class="galleryimg">
+            <div style="width: 100%; padding-bottom: 20px;">
+                <h1><a id="gallery">Gallery</a></h1>
+            </div>
+            <div style="width: 100%; display: flex; flex-wrap: wrap;">
+                <div class="row1">
+                    <div class="col1">
+                        <img
+                            src="https://images.unsplash.com/photo-1553987882-91d92995e16c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+                    </div>
+                    <div class="col1">
+                        <img
+                            src="https://images.unsplash.com/photo-1514984879728-be0aff75a6e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=784&q=80">
+                    </div>
+                    <div class="col1">
+                        <img
+                            src="https://images.unsplash.com/photo-1526674183561-4bfb419ab4e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------videos------------->
+
+    <section class="videos">
+        <div class="videos link">
+            <div style="width: 100%; padding-bottom: 20px;">
+                <h1><a id="video">Video</a></h1>
+            </div>
+            <!-- <div style="width: 100%; display: flex; flex-wrap: wrap;"> -->
+            <iframe style="float: left;
+                padding: 30px;
+                width: 610px;
+                height: 290px;
+                border: 0ch;" src="https://www.youtube.com/embed/MPV2METPeJU">
+            </iframe>
+            <iframe style="float: right;
+                padding: 30px;
+                width: 610px;
+                height: 290px;
+                border: 0ch;" src="https://www.youtube.com/embed/q1adV0O7JmA">
+            </iframe>
+            <iframe style="float: left;
+                padding: 30px;
+                width: 610px;
+                height: 290px;
+                border: 0ch;" src="https://www.youtube.com/embed/JUsLlxXWch0">
+            </iframe>
+            <iframe style="float: right;
+                padding: 30px;
+                width: 610px;
+                height: 290px;
+                border: 0ch;" src="https://www.youtube.com/embed/08NT5qfmZec">
+            </iframe>
+            <!-- <iframe style="float: left;
+                padding: 15px;
+                width: 410px;
+                height: 250px;
+                border: 0ch;" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                </iframe>
+                <iframe style="float: left;
+                padding: 15px;
+                width: 410px;
+                height: 250px;
+                border: 0ch;" src="https://www.youtube.com/embed/tgbNymZ7vqY"> -->
+            </iframe>
+            <div>
+            </div>
+        </div>
+
+    </section>
+
+    <!---------Contact us----------->
+
+    <section class="contact">
+        <div class="contactus">
+            <div style="width: 100%; padding-bottom: 20px;">
+                <h1><a id="contact">Contact Us</a></h1>
+            </div>
+            <div style="width: 100%;">
+                <div class="RR">
+                    <div class="col">
+                        <i class="fa fa-map-marker"
+                            style="font-size:45px;color:#4fd4e6; position: relative; padding-left: 49%;"></i><br>
+                        <h4>Our Office Address</h4>
+                        <br>
+                        <p>F7 Markaz, Islambad, Pakistan</p><br>
+                    </div>
+                    <div class="col">
+                        <i class="fa fa-question-circle"
+                            style="font-size:45px;color:#4fd4e6; position: relative; padding-left: 49%;"></i><br>
+                        <h4>General Enquries</h4><br>
+                        <p>contact@gmail.com</p><br>
+                    </div>
+                    <div class="col">
+                        <i class="fa fa-phone"
+                            style="font-size:45px;color:#4fd4e6; position: relative; padding-left: 49%;"></i><br>
+                        <h4>Call Us</h4><br>
+                        <p>+92-315-5840406</p><br>
+                    </div>
+                    <div class="col" style="padding-bottom: 50px;">
+                        <i class="fa fa-clock-o"
+                            style="font-size:45px;color:#4fd4e6; position: relative; padding-left: 49%;"></i><br>
+                        <h4>Our Timings</h4><br>
+                        <p>Mon-Sat : 10:00AM - 05:00PM</p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------Footer-------------->
+
+    <section class="Ending-Of-Page">
+        <footer class="footer">
+            <!-- <div style=" padding-bottom: 180px;"></div> -->
+            <div class="waves">
+                <div class="wave" id="wave1"></div>
+                <div class="wave" id="wave2"></div>
+                <div class="wave" id="wave3"></div>
+                <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/">
+
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://twitter.com/login?lang=en">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/login">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a></li>
+                <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a></li>
+            </ul>
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="#About us">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="#products">Products</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+                <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+
+            </ul>
+            <p>&copy;2023 Faaiz & Saad | All Rights Reserved</p>
+        </footer>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+
+</body>
+
+</html>
